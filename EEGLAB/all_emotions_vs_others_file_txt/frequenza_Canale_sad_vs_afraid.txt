@@ -1,0 +1,2 @@
+Canale	Frequenza_Canale
+7	100

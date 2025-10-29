@@ -1,0 +1,3 @@
+Indice	Frequenza_Indice
+14	50
+25	50

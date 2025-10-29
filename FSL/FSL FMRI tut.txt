@@ -1,0 +1,44 @@
+FSL LECTURE 20 NOV 10 2023 slide 39-49
+
+1 STEP BET to skull strip your anatomical images
+
+Skull stripping is necessary for more accurate co-registration and normalization (warping your images to a standardized space).
+
+
+The preprocessing steps can be carried out in the FEAT GUI. To perform the preprocessing click on “Preprocessing” button. In the FEAT GUI, motion correction is specified in the “Pre-stats” tab.
+
+FSL’s default is to not do slicetiming correction, and to include a temporal derivative instead.
+
+In spatial smoothing, the signal of each voxel is averaged with the signal of its near voxels, weighted by a Gaussian kernel of some chosen full width at half maximum (FWHM), which is possible to set in FEAT GUI.
+
+
+Co-registration and Normalization are packaged together as a single step in the FEAT GUI’s Registration tab
+
+MELODIC ( Multivariate Exploratory Linear Optimized Decomposition into Independent Components ) 3.0 uses Independent Component Analysis to decompose a single or multiple 4D data sets into different spatial and temporal components.
+
+
++ how to classify IC LECTURE 30 DEC 4 2023
+
+FAQs lecture 31, 32, 33, 34 - leggerle
+
+31 
+	What can I do if I am not able to navigate in the folder containing the data to
+	analyze?
+
+	What are the options that I can set using BET?
+
+	Can I see a template in order to have a clearer idea of the structure to be 	included in the brain extracted?
+
+32
+	After having extracted the brain, should I apply FEAT to apply the preprocessing?
+	How can I set the options in section “Data” of MELODIC?
+	How can I set the options in section “Pre-Stats” of MELODIC?
+
+33
+	How can I set the options in section “Registration” of MELODIC?
+	Setting the “Registration” options in MELODIC, did I apply the registration?
+	How to set ICA dimensionality?
+	How to define the active voxels?
+34
+	How to normalize the ICs derived from ICA?
+	Where can I visualize obtained results?

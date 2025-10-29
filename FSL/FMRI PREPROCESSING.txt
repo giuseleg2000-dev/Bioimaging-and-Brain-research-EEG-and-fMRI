@@ -1,0 +1,51 @@
+FMRI PREPROCESSING
+(CHECK FSL LECTURE 20 NOV 10 2023)
+DATA INITIAL QUALITY CHECK
+check the database consistency of key parameters that may have
+influences on pre-processing. These parameters include the number of volumes, TR, and voxel
+sizes
+
+Step-by-Step Quality Assessment
+
+
+SLICE TIMING CORRECTION
+A suggested step of preprocessing, when individual slices are recorded and especially for eventrelated design protocols, is the proper treatment of differences in scanning time. An imprecise specification of time risks to lead to suboptimal statistical analysis, especially in event-related designs
+
+
+
+MOTION CORRECTION 
+Head motion is the largest source of bias in fMRI studies. If the subject is moving during
+imaging, the images will look blurry and less defined.
+
+All major fMRI analysis packages (as FSL) produce line plots allowing the user visual inspection of how translation and rotation parameters change from volume to volume (thus in time!).
+
+TEMPORAL FILTERING 
+The removal of baseline (low frequency drifts) is known as detrending. It may be performed
+using high-pass filtering or using time-domain averaging methods.
+
+High-frequency signal fluctuations
+(usually identified as noise) can be removed by low-pass filtering not recommended for most studies, since it may compromise estimation of hemodynamic response functions and the signals of interest.
+
+SPATIAL SMOOTHING
+Spatial smoothing is the replacing of the signal at each voxel with a weighted average of
+signals from adjacent voxels. This process can be justified by the fact that adjacent brain voxels are usually inherently correlated in their function (and thus in blood supply
+
+In practice, the full width half maximum (FWHM) value of the Gaussian spatial filter is
+typically set to about 4-6 mm for single subject studies and to about 6-8 mm for multisubject analyses. 
+
+REGISTRATION
+
+to ensure that each voxel for each subject corresponds to the same part of the
+brain (co-registering and normalizing the images).
+It is possible to do this by
+normalizing to a template
+
+To normalize (or warp) the images to a template, an affine transformation can be performed.
+
+If the anatomical image is normalized to a template and the related transformations are saved, the
+same transformations can be applied the functional images, assuming they are aligned. The
+alignment of the functional and anatomical images is called co-registration.
+Once the best match has been found, then the same transformations that were used to warp
+the anatomical image to the template are applied to the functional images
+
+

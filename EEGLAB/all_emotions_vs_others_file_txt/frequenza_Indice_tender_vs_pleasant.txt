@@ -1,0 +1,4 @@
+Indice	Frequenza_Indice
+1	33.33
+24	33.33
+27	33.33

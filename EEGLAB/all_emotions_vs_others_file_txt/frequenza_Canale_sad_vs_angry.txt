@@ -1,0 +1,2 @@
+Canale	Frequenza_Canale
+11	100

@@ -1,0 +1,2 @@
+Indice	Frequenza_Indice
+7	100

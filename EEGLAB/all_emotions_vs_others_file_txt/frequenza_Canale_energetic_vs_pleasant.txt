@@ -1,0 +1,4 @@
+Canale	Frequenza_Canale
+1	16.67
+6	33.33
+9	50
